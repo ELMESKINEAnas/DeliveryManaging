@@ -21,10 +21,10 @@ import {
 router.post("/login", loginAdmin)
 router.post("/create",signup)
 router.get("/logout", logout)
-router.post("/createManager",Auth("ADMIN"), CreatUserValidator, createManager)
+router.post("/createManager", CreatUserValidator, createManager)
 router.get("/getAllManagers",  getAllManagers)
 router.get("/getManager/:id", Auth("ADMIN"), getManager)
 router.patch("/updateManager/:id", updateManager)
-router.delete("/RemoveManager/:id", Auth("ADMIN"), removeManager)
+router.delete("/RemoveManager/:id", removeManager)
 
 export { router }
